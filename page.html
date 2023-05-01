@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    
+  }
+  
+  header {
+    background-color: #444;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: #bbb;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scrolling-images {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scrolling-images img {
+    max-width: 500px;
+    height: auto;
+    margin: 0 10px;
+  }
+  
+  .product-details {
+    padding: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .product-details h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .product-price {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .product-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .buy-now-btn {
+    background-color: #fff;
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1d1d1d;
+      
+    }
+    
+    header {
+      background-color: #343232;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: scroll;
+    }
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    
+    nav ul {
+      display: flex;
+    }
+    
+    nav ul li {
+      list-style: none;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+    
+    nav form {
+      display: flex;
+      margin-left: auto;
+    }
+    
+    nav input[type="text"] {
+      padding: 12px;
+      border: solid rgb(62, 61, 61);
+      border-radius: 52px 0 90px 52px;
+      margin-right: -5px;
+      overflow-x: scroll;
+      color: white;
+      width: 80px;
+      background-color: #343232;
+    }
+    
+    nav button[type="submit"] {
+      background-color: #2eb17d;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 0px 50px 50px 90px;
+      cursor: pointer;
+      min-width: 80px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      nav ul {
+        position: relative;
+        
+      }
+      nav form {
+        margin-left: auto;
+      }
+      nav input[type="text"] {
+        max-width: 70%;
+        min-width: 0%;
+      }
+      nav button[type="submit"] {
+        max-width: 30%;
+      }
+    }
+    @media  screen and (max-width:350px) {
+      nav input[type="text"] {
+        
+        display: flex;
+        flex-direction:row-reverse;
+      }
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    .filter {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    
+    .filter label {
+      margin-right: 10px;
+    }
+    
+    .filter select {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    
+    .product {
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .product img {
+      max-width: 100%;
+    }
+    
+    .product , .size {
+      
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #fff;
+
+    }
+    .size{
+      padding-top: 10%;
+    }
+    
+    .product p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #fff;
+
+    }
+    
+    .product button {
+      background-color: #2eb17d;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .cart-icon {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      cursor: pointer;
+    }
+    
+    .cart-icon i {
+      font-size: 1.5rem;
+      margin-right: 5px;
+    }
+    
+    .cart-count {
+      background-color: #bb3838;
+      color: #fff;
+      border-radius: 5%;
+      padding: 3px 5px;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+    .brand{
+      max-width: 50px;
+    }
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .product-image {
+        position: relative;
+        padding: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      
+      .product-image img {
+        transition: all 0.2s ease-in-out;
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .product-details {
+        max-width: 600px;
+      }
+      
+      .product-details h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      
+      .product-details p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      
+      .product-details button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      @media screen and (min-width: 768px) {
+        .product-container {
+          flex-direction: row;
+        }
+      
+        .product-image {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+      
+        .product-details {
+          text-align: left;
+        }
+      
+        .product-details h2 {
+          font-size: 32px;
+          margin-bottom: 15px;
+        }
+      
+        .product-details p {
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+      }
+      .product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .product-images {
+        display: flex;
+        overflow-x: scroll;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .product-image {
+        padding: 10px;
+        margin-right: 20px;
+        max-width: 100%;
+        height: auto;
+        flex-shrink: 0;
+      }
+      
+      .product-image img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .product-details {
+        max-width: 600px;
+      }
+      
+      .product-details h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      
+      .product-details p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      
+      .product-details button {
+        padding: 10px 20px;
+        background-color: #2eb17d;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      
+      @media screen and (min-width: 768px) {
+        .product-container {
+          flex-direction: row;
+        }
+      
+        .product-images {
+          overflow-x: hidden;
+          margin-right: 20px;
+        }
+      
+        .product-details {
+          text-align: left;
+        }
+      
+        .product-details h2 {
+          font-size: 32px;
+          margin-bottom: 15px;
+        }
+      
+        .product-details p {
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+      }
+      .product-images {
+        display: flex;
+        overflow-x: scroll;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+      }
+      
+      @media screen and (min-width: 768px) {
+        .product-images {
+          overflow-x: scroll;
+          margin-right: 20px;
+        }
+      }
+      
+      button:hover {
+        transition: 0.5s ease-in-out;
+        background-color: #1b553c;
+      }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <nav>
+            <img src="https://e7.pngegg.com/pngimages/642/548/png-clipart-logo-calvin-klein-t-shirt-brand-fashion-calvin-klein-logo-angle-text-thumbnail.png" alt="" class="brand">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <form>
+              <input type="text" placeholder="Search...">
+              <button type="submit">Search</button>
+            </form>
+          </nav>
+        </div>
+      </header>
+      
+  <main>
+    <div class="product-container">
+        <div class="product-images">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x400" alt="Product Image">
+          </div>
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x400" alt="Product Image">
+          </div>
+          <div class="product-image">
+            <img src="https://via.placeholder.com/300x400" alt="Product Image">
+          </div>
+        </div>
+        <div class="product-details">
+          <h2>Product Name</h2>
+          <p>Product Description</p>
+          <button>BUY NOW</button>
+        <div>
+          <button style="margin:10px 0px 0px 0px;">ADD TO CART</button>
+        </div>
+        </div>
+      </div>
+      
+  </main>
+</body>
+<script>
+
+
+</script>
+</html>
